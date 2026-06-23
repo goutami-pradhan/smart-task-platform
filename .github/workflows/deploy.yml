@@ -48,12 +48,12 @@ jobs:
          aws-region:
            ${{ secrets.AWS_REGION }}
 
-     - name: Deploy Frontend
+     - name: Deploy to s3
        run: |
 
          aws s3 sync \
          build/ \
-         s3://${{ secrets.S3_BUCKET_NAME }}/smart-task-frontend-goutami-230027225622-us-east-1-an\
+         s3://${{ secrets.S3_BUCKET_NAME }} \
          --delete
 
  backend-build:
