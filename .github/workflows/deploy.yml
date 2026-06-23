@@ -53,7 +53,7 @@ jobs:
 
          aws s3 sync \
          build/ \
-         s3://${{ secrets.S3_BUCKET_NAME }} \
+         s3://${{ secrets.S3_BUCKET_NAME }}/smart-task-frontend-goutami-230027225622-us-east-1-an\
          --delete
 
  backend-build:
